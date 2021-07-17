@@ -6,7 +6,7 @@ name: CI
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/50 * * * *'
+    - cron:  '0 12 * * *'
   #Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
@@ -35,7 +35,7 @@ jobs:
         run: for (( i = 0; i < 2; i++ )); do wget -r -np -k https://sritez.com/; rm -rf *sritez*; done
 
       # Runs a set of commands using the runners shell
-#       - name: Run a multi-line script
-#         run: |
-#           USER_AGENT='user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36'
-#           for (( i = 0; i < 10000; i++ )); do curl -s -H "${USER_AGENT}" -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null https://sritez.com/; wget https://sritez.com/admin/slider/pictures-brainstorming-162082-4103334.png; rm -f *.png; done
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
