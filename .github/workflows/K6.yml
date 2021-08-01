@@ -5,7 +5,7 @@ name: CI-K6
 # Controls when the workflow will run
 on:
   schedule:
-    - cron:  '0 */1 * * *'
+    - cron:  '0 */6 * * *'
   # Triggers the workflow on push or pull request events but only for the main branch
 #   push:
 #     branches: [ main ]
@@ -53,21 +53,21 @@ jobs:
           docker run -i loadimpact/k6 run - <script.js
           
   # This workflow contains a single job called "build"
-  build-2:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Pull Docker k6 image
-        run: docker pull loadimpact/k6
-      - name: Run a K6 load test
-        run: |
-          echo "import http from 'k6/http';
-          import { sleep } from 'k6';
-          export let options = {
-            vus: ${{ github.event.inputs.users }},
-            duration: '${{ github.event.inputs.duration }}',
-          };
-          export default function () {
-            http.get('${{ github.event.inputs.domain_url }}');
-            sleep(1);
-          }" >> script.js
-          docker run -i loadimpact/k6 run - <script.js
+#   build-2:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Pull Docker k6 image
+#         run: docker pull loadimpact/k6
+#       - name: Run a K6 load test
+#         run: |
+#           echo "import http from 'k6/http';
+#           import { sleep } from 'k6';
+#           export let options = {
+#             vus: ${{ github.event.inputs.users }},
+#             duration: '${{ github.event.inputs.duration }}',
+#           };
+#           export default function () {
+#             http.get('${{ github.event.inputs.domain_url }}');
+#             sleep(1);
+#           }" >> script.js
+#           docker run -i loadimpact/k6 run - <script.js
