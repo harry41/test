@@ -12,6 +12,16 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      users:
+        description: 'No of Users'
+        default: '10000'
+      duration:
+        description: 'Time duration'
+        default: '600s'
+      domain_url:
+        description: 'Enter Domain URL'
+        default: 'https://sritez.com'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,19 +34,18 @@ jobs:
     steps:
       - name: Pull Docker k6 image
         run: docker pull loadimpact/k6
-
-
+        
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run a K6 load test
         run: |
           echo "import http from 'k6/http';
           import { sleep } from 'k6';
           export let options = {
-            vus: 1000,
-            duration: '1200s',
+            vus: ${{ github.event.inputs.users }},
+            duration: '${{ github.event.inputs.duration }}',
           };
           export default function () {
-            http.get('https://sritez.com');
+            http.get('${{ github.event.inputs.domain_url }}');
             sleep(1);
           }" >> script.js
           docker run -i loadimpact/k6 run - <script.js
