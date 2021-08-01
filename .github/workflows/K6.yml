@@ -40,5 +40,7 @@ jobs:
             sleep(1);
           }" >> script.js
           
-          ls la 
+          ls -la 
+          pwd
+          cat script.js
           docker run -i loadimpact/k6 run - <script.js
