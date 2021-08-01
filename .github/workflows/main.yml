@@ -6,7 +6,7 @@ name: CI
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 12 * * *'
+    - cron:  '0 */4 * * *'
   #Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
@@ -35,6 +35,54 @@ jobs:
 #         run: for (( i = 0; i < 2; i++ )); do wget -r -np -k https://sritez.com/; rm -rf *sritez*; done
 
       # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+    
+  build-3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+    
+  build-6:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run a multi-line script
         run: |
           wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
