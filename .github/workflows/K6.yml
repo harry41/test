@@ -19,7 +19,7 @@ on:
         default: '10000'
       duration:
         description: 'Time duration'
-        default: '600s'
+        default: '3200s'
       domain_url:
         description: 'Enter Domain URL'
         default: 'https://sritez.com'
