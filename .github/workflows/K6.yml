@@ -37,9 +37,6 @@ jobs:
           };
           export default function () {
             http.get('https://sritez.com');
+            sleep(1);
           }" >> script.js
-          
-          ls -la 
-          pwd
-          cat script.js
           docker run -i loadimpact/k6 run - <script.js
