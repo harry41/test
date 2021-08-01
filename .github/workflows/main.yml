@@ -87,3 +87,93 @@ jobs:
         run: |
           wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
           du -sh *
+
+
+  build-7:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+    
+  build-9:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-10:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-11:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+    
+  build-12:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+          
+  build-13:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+    
+  build-14:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-15:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+          
+  build-16:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
+    
+  build-17:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          wget --recursive --no-clobber --page-requisites --html-extension --convert-links --domains sritez.com --no-parent https://sritez.com/
+          du -sh *
