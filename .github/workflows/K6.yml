@@ -34,7 +34,7 @@ jobs:
     env:
       DURATION: ${{ github.event.inputs.duration || 3600s }}
       USERS: ${{ github.event.inputs.users || 10000 }}
-      DOMAIN: ${{ github.event.inputs.domain_url|| https://sritez.com }}
+      DOMAIN: ${{ github.event.inputs.domain_url || https://sritez.com }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
