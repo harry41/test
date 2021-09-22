@@ -17,7 +17,7 @@ on:
     inputs:
       users:
         description: 'No of Users'
-        default: '10000'
+        default: '80000'
       duration:
         description: 'Time duration'
         default: '3200s'
