@@ -17,7 +17,7 @@ on:
     inputs:
       users:
         description: 'No of Users'
-        default: '80000'
+        default: '5000'
       duration:
         description: 'Time duration'
         default: '3200s'
@@ -48,7 +48,7 @@ jobs:
           import { sleep } from 'k6';
           export let options = {
             insecureSkipTLSVerify: true,
-            iterations: 2000000,
+            iterations: 20000,
             batch: 500,
             vus: ${USERS},
             duration: '${DURATION}',
