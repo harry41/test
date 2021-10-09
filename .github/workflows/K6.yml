@@ -48,7 +48,7 @@ jobs:
           import { sleep } from 'k6';
           export let options = {
             insecureSkipTLSVerify: true,
-            iterations: 2,
+            iterations: 2000000,
             batch: 500,
             vus: ${USERS},
             duration: '${DURATION}',
