@@ -47,6 +47,9 @@ jobs:
           echo "import http from 'k6/http';
           import { sleep } from 'k6';
           export let options = {
+            insecureSkipTLSVerify: true,
+            iterations: 2,
+            batch: 500,
             vus: ${USERS},
             duration: '${DURATION}',
           };
