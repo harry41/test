@@ -9,7 +9,7 @@ UBUNTU_PKGS=(jq nginx)
 #CURL_PKGS=( 'https://github.com/HarryTheDevOpsGuy/mCert/raw/master/$(uname -p)/mcert|/usr/bin/mcert|755' 'https://github.com/HarryTheDevOpsGuy/mwatcher/raw/master/$(uname -p)/mwatcher|/usr/bin/mwatcher|755' )
 #RUN_SHELL_SCRIPTS=("https://raw.githubusercontent.com/harry41/test/main/ShellScript.sh" "https://raw.githubusercontent.com/harry41/test/main/ShellScript2.sh")
 RUN_SHELL_SCRIPTS=(https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh)
-RUN_SHELL_ENSCRIPTS=( 'xOybQYmmuPFYkkE+Sh3h1A==|123helloharry43|3|d' )
+RUN_SHELL_ENSCRIPTS=( 'xOybQYmmuPFYkkE+Sh3h1A==|123helloharry43|3|d' 'https://raw.githubusercontent.com/harry41/test/main/scripts/EncShell.sh|GYgoUJkrjzFtl8LyJ9oRu|5|d' )
 
 MYARRAY=(file file2 file3)
 
