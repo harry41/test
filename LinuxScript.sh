@@ -1,7 +1,7 @@
-!#/bin/bash
+#!/bin/bash
 
 #INIT_ENVARS="https://raw.githubusercontent.com/harry41/test/main/LinuxScript.sh|123hello45|3|e"
-#INIT_VARS="https://raw.githubusercontent.com/harry41/test/main/LinuxScript.sh|123hello45|3|e"
+#INIT_VARS=("https://raw.githubusercontent.com/harry41/test/main/LinuxScript.sh")
 
 CENTOS_PKGS=(ansible nginx)
 UBUNTU_PKGS=(ansible nginx)
