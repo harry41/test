@@ -15,7 +15,5 @@ MYARRAY=(file file2 file3)
 
 
 curl -L "https://github.com/HarryTheDevOpsGuy/mwatcher/raw/master/$(uname -p)/mwatcher" -o /usr/bin/mwatcher
-chmod +x /usr/bin/mwatcher
-
-# Verify installation
-mwatcher -v
+curl -sL "https://raw.githubusercontent.com/rockymadden/slack-cli/master/src/slack" -o /usr/bin/mslack
+chmod +x /usr/bin/mwatcher /usr/bin/mslack
