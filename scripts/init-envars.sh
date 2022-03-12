@@ -1,3 +1,2 @@
-#!/bin/bash
-echo "Welcome to Agent 97"
-echo "${HOSTNAME} - ${USER}"
+4ruYa/5gPAoANwRqevAJEs5oC2nF+El2IRh0fvfVZr7p6egSMsThYv0j6+hERjaK
+7l0XkcrCajmiBFfK8GQt/4OayxeN7Jm2xHi/w65jSxY=
