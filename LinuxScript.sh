@@ -1,9 +1,11 @@
 #!/bin/bash
-if [[ ${OPENSSL_VERSION} -ge "2020" ]]; then
+if [[ ${OPENSSL_VERSION} -gt "2019" ]]; then
   export SCRIPT_YEAR="2020"
-elif [[  ${OPENSSL_VERSION} -lt "2020" ]]; then
+elif [[  ${OPENSSL_VERSION} -lt "2019" ]]; then
   export SCRIPT_YEAR="2017"
 fi
+
+echo "SCRIPT_YEAR: ${SCRIPT_YEAR}"
 
 case ${SCRIPT_YEAR} in
   2020 )
