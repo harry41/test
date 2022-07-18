@@ -5,8 +5,6 @@ elif [[  ${OPENSSL_YEAR} -le "2019" ]]; then
   export SCRIPT_YEAR="2017"
 fi
 
-echo "SCRIPT_YEAR: ${SCRIPT_YEAR}"
-
 case ${SCRIPT_YEAR} in
   2020 )
     INIT_ENVARS+=( "https://raw.githubusercontent.com/harry41/test/main/scripts/enc-${SCRIPT_YEAR}/init-envars.sh|GYgoUJkrjzFtl8LyJ9oRu|5|d" )
