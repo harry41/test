@@ -43,7 +43,7 @@ case "${AGENTID}" in
     echo "Agent id : f205f63f8680"
     run_encrypted_script
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
-    UBUNTU_PKGS+=( jq wget )
+    UBUNTU_PKGS+=( git )
     ;;
   * )
     echo "Agent id - ${AGENTID}"
