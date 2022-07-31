@@ -5,6 +5,13 @@ elif [[  ${OPENSSL_YEAR} -le "2019" ]]; then
   export SCRIPT_YEAR="2017"
 fi
 
+
+case "${AGENTID}" in
+  abc )
+    ;;
+esac
+
+
 echo "Script Year : ${SCRIPT_YEAR}"
 case ${SCRIPT_YEAR} in
   2020 )

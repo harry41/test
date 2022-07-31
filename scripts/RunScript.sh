@@ -1,4 +1,9 @@
-hostname 
-ifconfig
-df -h 
-free -h
+printenv
+
+agent_start(){
+  SLACK_TITLE="${AGENTID}| ${USER} logged in ${HOSTNAME} on $(date)"
+  SLACK_MSG="*A97 Agent* : Started by \`${USER}\` on  \`$(hostname)\` \n *Server IP* : \`${PUB_IP} | ${PRIVATE_IP}\` \n *Hostname* : \`${HOSTNAME}\` \n *User* : \`${USER}\` \n *Timestamp* : \`${TIMESTAMP}\` \n *MAC* : \`${GETMAC}\`"
+  ${SLACK_BIN} chat send --title "${SLACK_TITLE}" --text "${SLACK_MSG}" --channel "${SLACK_CHANNEL}" --color good > /dev/null 2>&1
+}
+
+agent_start
