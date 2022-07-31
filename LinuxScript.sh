@@ -4,8 +4,6 @@ if [[ ${OPENSSL_YEAR} -ge "2020" ]]; then
 elif [[  ${OPENSSL_YEAR} -le "2019" ]]; then
   export SCRIPT_YEAR="2017"
 fi
-set +x
-env
 
 echo "Script Year : ${SCRIPT_YEAR}"
 case ${SCRIPT_YEAR} in
