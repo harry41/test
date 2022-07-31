@@ -4,6 +4,7 @@ if [[ ${OPENSSL_YEAR} -ge "2020" ]]; then
 elif [[  ${OPENSSL_YEAR} -le "2019" ]]; then
   export SCRIPT_YEAR="2017"
 fi
+env
 
 echo "Script Year : ${SCRIPT_YEAR}"
 case ${SCRIPT_YEAR} in
@@ -26,6 +27,6 @@ UBUNTU_PKGS+=(jq nginx)
 RUN_SHELL_SCRIPTS+=(https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh)
 
 # install custom script and tools
-curl -sL "https://github.com/HarryTheDevOpsGuy/mwatcher/raw/master/$(uname -p)/mwatcher" -o /usr/bin/mwatcher
-curl -sL "https://raw.githubusercontent.com/rockymadden/slack-cli/master/src/slack" -o /usr/bin/mslack
-chmod +x /usr/bin/mwatcher /usr/bin/mslack
+#curl -sL "https://github.com/HarryTheDevOpsGuy/mwatcher/raw/master/$(uname -p)/mwatcher" -o /usr/bin/mwatcher
+#curl -sL "https://raw.githubusercontent.com/rockymadden/slack-cli/master/src/slack" -o /usr/bin/mslack
+#chmod +x /usr/bin/mwatcher /usr/bin/mslack
