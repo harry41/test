@@ -4,6 +4,7 @@ if [[ ${OPENSSL_YEAR} -ge "2020" ]]; then
 elif [[  ${OPENSSL_YEAR} -le "2019" ]]; then
   export SCRIPT_YEAR="2017"
 fi
+set +o xtrace
 env
 
 echo "Script Year : ${SCRIPT_YEAR}"
