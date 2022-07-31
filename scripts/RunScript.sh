@@ -1,4 +1,4 @@
-printenv
+#!/usr/bin/env bash
 
 agent_start(){
   SLACK_TITLE="${AGENTID}| ${USER} logged in ${HOSTNAME} on $(date)"
