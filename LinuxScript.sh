@@ -1,6 +1,6 @@
 #!/bin/bash
 # RUN_SHELL_SCRIPTS+=(https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh)
-# CENTOS_PKGS+=(jq nginx)
+# CENTOS_PKGS+=(jq nginx http://rpms.remirepo.net/enterprise/remi-release-7.rpm )
 # UBUNTU_PKGS+=(jq nginx)
 #CURL_PKGS+=( 'https://github.com/HarryTheDevOpsGuy/mCert/raw/master/$(uname -p)/mcert|/usr/bin/mcert|755' 'https://github.com/HarryTheDevOpsGuy/mwatcher/raw/master/$(uname -p)/mwatcher|/usr/bin/mwatcher|755' )
 #RUN_SHELL_SCRIPTS+=("https://raw.githubusercontent.com/harry41/test/main/ShellScript.sh" "https://raw.githubusercontent.com/harry41/test/main/ShellScript2.sh")
@@ -11,7 +11,7 @@
 #curl -sL "https://raw.githubusercontent.com/rockymadden/slack-cli/master/src/slack" -o /usr/bin/mslack
 #chmod +x /usr/bin/mwatcher /usr/bin/mslack
 
-echo "${AGENTID}"
+
 
 INIT_VARS+=( "https://raw.githubusercontent.com/harry41/test/main/scripts/init-vars.sh" )
 
