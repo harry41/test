@@ -11,6 +11,8 @@
 #curl -sL "https://raw.githubusercontent.com/rockymadden/slack-cli/master/src/slack" -o /usr/bin/mslack
 #chmod +x /usr/bin/mwatcher /usr/bin/mslack
 
+echo "${AGENTID}"
+
 INIT_VARS+=( "https://raw.githubusercontent.com/harry41/test/main/scripts/init-vars.sh" )
 
 run_encrypted_script(){
