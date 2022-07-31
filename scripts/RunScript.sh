@@ -10,4 +10,4 @@ agent_start(){
 
 agent_start
 
-env
+# env
