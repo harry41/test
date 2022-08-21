@@ -40,14 +40,14 @@ case "${AGENTID}" in
     run_encrypted_script
     ;;
   f205f63f8680 )
-    echo "Agent id : f205f63f8680"
+    echo "Custom Rule:: Agent ID : f205f63f8680"
     #run_encrypted_script
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
     UBUNTU_PKGS+=( git )
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|755' )
     ;;
   * )
-    echo "Agent id - ${AGENTID}"
+    echo "Global rule :: Agent id - ${AGENTID}"
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|755' )
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
     ;;
