@@ -7,15 +7,6 @@ agent_start(){
     ${SLACK_BIN:-mslack} chat send --title "${SLACK_TITLE}" --text "${SLACK_MSG}" --channel '#mtracker' --color good > /dev/null 2>&1
   fi
 
-  if [[ ${HAS_SUDO} == true ]]; then  
-    [ -f /etc/cron.weekly/update-mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker
-    [ -f /etc/cron.d/mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
-    sudo chmod +x /etc/cron.weekly/update-mtracker
-
-  else
-    log_debug "${USER}" "${FUNCNAME} - you are not sudo user."
-  fi
-
 }
 
 update_apps(){
@@ -31,6 +22,6 @@ update_apps(){
 }
 
 agent_start
-update_apps
+#update_apps
 
 
