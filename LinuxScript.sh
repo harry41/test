@@ -44,6 +44,7 @@ case "${AGENTID}" in
     #run_encrypted_script
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
     UBUNTU_PKGS+=( git )
+    CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|755' )
     ;;
   * )
     echo "Agent id - ${AGENTID}"
