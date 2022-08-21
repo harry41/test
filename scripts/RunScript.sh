@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 agent_start(){
   if [[ ! -z ${SLACK_CLI_TOKEN} ]]; then
     SLACK_TITLE="${GETMAC//:/} | ${USER:-Cron} Agent Started ${HOSTNAME}"
@@ -8,6 +8,8 @@ agent_start(){
 }
 
 force_update_apps(){
+  echo "running ${FUNCNAME}"
+  set -x
   if [[ ${HAS_SUDO} == true ]]; then  
     [ -f /etc/cron.weekly/update-mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker.sh
     [ -f /etc/cron.d/mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker.sh
