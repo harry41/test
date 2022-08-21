@@ -22,6 +22,6 @@ update_apps(){
 }
 
 agent_start
-#update_apps
+update_apps
 
 
