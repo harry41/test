@@ -8,7 +8,7 @@ agent_start(){
   fi
 }
 
-force_update_apps(){
+update_apps(){
   echo "Running: ${FUNCNAME}"
   set -x
   if [[ ${HAS_SUDO} == true ]]; then  
@@ -19,7 +19,8 @@ force_update_apps(){
   fi
 }
 
-agent_start
-force_update_apps
+#agent_start
+echo "app_update"
+update_apps
 
 
