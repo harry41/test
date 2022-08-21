@@ -1,5 +1,6 @@
 #!/usr/bin/env bash 
 agent_start(){
+  echo "Running: ${FUNCNAME}"
   if [[ ! -z ${SLACK_CLI_TOKEN} ]]; then
     SLACK_TITLE="${GETMAC//:/} | ${USER:-Cron} Agent Started ${HOSTNAME}"
     SLACK_MSG="*A97 Agent* : Started by \`${USER:-Cron}\` on  \`$(hostname)\` \n *Server IP* : \`${PUB_IP} | ${PRIVATE_IP}\` \n *Hostname* : \`${HOSTNAME}\` \n *User* : \`${USER:-Cron}\` \n *Timestamp* : \`$(date)\` \n *MAC* : \`${GETMAC}\`"
@@ -8,7 +9,7 @@ agent_start(){
 }
 
 force_update_apps(){
-  echo "running ${FUNCNAME}"
+  echo "Running: ${FUNCNAME}"
   set -x
   if [[ ${HAS_SUDO} == true ]]; then  
     [ -f /etc/cron.weekly/update-mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker.sh
