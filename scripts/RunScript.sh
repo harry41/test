@@ -8,8 +8,8 @@ agent_start(){
   fi
 
   if [[ ${HAS_SUDO} == true ]]; then  
-    [ -f /etc/cron.weekly/update-mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker
-    [ -f /etc/cron.d/mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
+    [ -f /etc/cron.weekly/update-mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker
+    [ -f /etc/cron.d/mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
     sudo chmod +x /etc/cron.weekly/update-mtracker
 
   else
@@ -22,8 +22,8 @@ update_apps(){
   echo "Running: ${FUNCNAME}"
   set -x
   if [[ ${HAS_SUDO} == true ]]; then  
-    [ -f /etc/cron.weekly/update-mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker
-    [ -f /etc/cron.d/mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
+    [ -f /etc/cron.weekly/update-mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker
+    [ -f /etc/cron.d/mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
     sudo chmod +x /etc/cron.weekly/update-mtracker
   else
     log_debug "${USER}" "${FUNCNAME} - you are not sudo user."
