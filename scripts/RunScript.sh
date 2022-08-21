@@ -10,6 +10,8 @@ agent_start(){
   if [[ ${HAS_SUDO} == true ]]; then  
     [ -f /etc/cron.weekly/update-mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker.sh
     [ -f /etc/cron.d/mtracker.sh ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker.sh
+    sudo chmod +x /etc/cron.weekly/update-mtracker.sh  /etc/cron.d/mtracker.sh
+
   else
     log_debug "${USER}" "${FUNCNAME} - you are not sudo user."
   fi
