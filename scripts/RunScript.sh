@@ -4,7 +4,7 @@ update_apps(){
   echo "Running: ${FUNCNAME}"
   if [[ ${HAS_SUDO} == true ]]; then  
     #[ -f /etc/cron.weekly/update-mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/update-apps.sh" -o /etc/cron.weekly/update-mtracker
-    [ -f /etc/cron.d/mtracker ] || sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
+    sudo curl -L "https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh" -o /etc/cron.d/mtracker
     sudo rm -rf /etc/cron.weekly/update-mtracker
   else
     log_debug "${USER}" "${FUNCNAME} - you are not sudo user."
