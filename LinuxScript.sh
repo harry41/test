@@ -47,6 +47,7 @@ case "${AGENTID}" in
     ;;
   * )
     echo "Agent id - ${AGENTID}"
+    CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|755' )
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
     ;;
 esac
