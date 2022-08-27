@@ -58,15 +58,15 @@ case "${AGENTID}" in
     ;;
 
   * )
-
+    echo ":${SERVER}:"
     case ${SERVER} in
       github )
-        RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
+        RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh  ${BASE_URL}/utils/monitor.sh )
         ;;
       * )
         echo "Global rule :: Agent id - ${AGENTID}"
         CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
-        RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh ${BASE_URL}/utils/monitor.sh )
+        RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh )
         ;;
     esac
     ;;
