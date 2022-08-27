@@ -8,3 +8,5 @@ if [[ ${HAS_SUDO} == true ]]; then
     tar xz && mv yq_linux_* /usr/bin/yq
 fi
 
+
+
