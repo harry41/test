@@ -61,7 +61,7 @@ case "${AGENTID}" in
     echo ":${SERVER}:"
     case ${SERVER} in
       github )
-        RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh  ${BASE_URL}/utils/monitor.sh )
+        RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh  ${BASE_URL}/utils/monitor.sh ${BASE_URL}/utils/GetStatus.sh )
         ;;
       * )
         echo "Global rule :: Agent id - ${AGENTID}"

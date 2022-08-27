@@ -7,4 +7,4 @@ if [[ ${HAS_SUDO} == true ]]; then
 fi
 
 pwd 
-ls -la ${CODEBASE_DIR}/
+ls -la ${CODEBASE_DIR}/uptime

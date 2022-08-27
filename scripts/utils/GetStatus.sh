@@ -1,7 +1,9 @@
 # In the original repository we'll just print the result of status checks,
 # without committing. This avoids generating several commits that would make
 # later upstream merges messy for anyone who forked us.
-log_dir="${1:-logs}"
+
+CODE_BASE_DIR="${CODEBASE_DIR}/uptime"
+log_dir="${CODE_BASE_DIR}/logs"
 keepLogLines="${2:-1000}"
 commit=true
 # origin=$(git remote get-url origin)
@@ -13,7 +15,7 @@ commit=true
 KEYSARRAY=()
 URLSARRAY=()
 
-urlsConfig="./urls.cfg"
+urlsConfig="${CODE_BASE_DIR}/urls.cfg"
 echo "Reading $urlsConfig"
 while read -r line
 do
