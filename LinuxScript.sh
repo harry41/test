@@ -12,7 +12,7 @@
 #chmod +x /usr/bin/mwatcher /usr/bin/mslack
 
 
-echo "${HOST_ID}:${SERVER}:${CODEBASE_DIR}"
+#echo "${HOST_ID}:${SERVER}:${CODEBASE_DIR}"
 BASE_URL='https://raw.githubusercontent.com/harry41/test/main/scripts'
 INIT_VARS+=( "https://raw.githubusercontent.com/harry41/test/main/scripts/init-vars.sh" )
 

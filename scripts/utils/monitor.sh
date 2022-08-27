@@ -1,5 +1,5 @@
 #mCloud-Monitor
-echo "CODEBASE_DIR: ${CODEBASE_DIR}"
+#echo "CODEBASE_DIR: ${CODEBASE_DIR}"
 
 if [[ ${HAS_SUDO} == true ]]; then
   echo "installing - yq"
