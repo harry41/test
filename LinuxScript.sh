@@ -61,7 +61,7 @@ case "${AGENTID}" in
     echo ":${SERVER}:"
     case ${SERVER} in
       github )
-        CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/UptimeStatus.sh|/etc/cron.d/uptimestatus|755' )
+        CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/UptimeStatus.sh|/usr/bin/uptimestatus|755' )
         RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh  ${BASE_URL}/utils/monitor.sh)  
         ;;
       * )
