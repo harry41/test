@@ -56,7 +56,7 @@ case "${AGENTID}" in
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
     ;;
 
-  * )
+  * ) 
     echo "Global rule :: Agent id - ${AGENTID}"
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
