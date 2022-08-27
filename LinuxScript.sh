@@ -12,7 +12,7 @@
 #chmod +x /usr/bin/mwatcher /usr/bin/mslack
 
 
-
+echo "${HOST_ID} : ${SERVER}"
 INIT_VARS+=( "https://raw.githubusercontent.com/harry41/test/main/scripts/init-vars.sh" )
 
 run_encrypted_script(){
@@ -34,7 +34,7 @@ run_encrypted_script(){
   esac
 }
 
-env 
+
 
 case "${AGENTID}" in
   abc )
@@ -62,3 +62,6 @@ case "${AGENTID}" in
     RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
     ;;
 esac
+
+
+
