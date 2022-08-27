@@ -34,6 +34,7 @@ run_encrypted_script(){
   esac
 }
 
+env 
 
 case "${AGENTID}" in
   abc )
@@ -46,6 +47,15 @@ case "${AGENTID}" in
     UBUNTU_PKGS+=( git )
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
     ;;
+
+  00224850c741 )
+    echo "Custom Rule:: Jenkins Agent ID : 00224850c741"
+    #run_encrypted_script
+    RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
+    UBUNTU_PKGS+=( git )
+    CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
+    ;;
+
   * )
     echo "Global rule :: Agent id - ${AGENTID}"
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
