@@ -1,4 +1,5 @@
 #mCloud-Monitor
+echo "CODEBASE_DIR: ${CODEBASE_DIR}"
 
 if [[ ${HAS_SUDO} == true ]]; then
   echo "installing - yq"
@@ -7,5 +8,3 @@ if [[ ${HAS_SUDO} == true ]]; then
     tar xz && mv yq_linux_* /usr/bin/yq
 fi
 
-pwd 
-ls -la ${CODEBASE_DIR}/uptime
