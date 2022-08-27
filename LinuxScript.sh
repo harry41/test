@@ -13,6 +13,7 @@
 
 
 echo "${HOST_ID} : ${SERVER}"
+BASE_URL='https://raw.githubusercontent.com/harry41/test/main/scripts'
 INIT_VARS+=( "https://raw.githubusercontent.com/harry41/test/main/scripts/init-vars.sh" )
 
 run_encrypted_script(){
@@ -56,12 +57,17 @@ case "${AGENTID}" in
     CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
     ;;
 
-  * ) 
-    echo "Global rule :: Agent id - ${AGENTID}"
-    CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
-    RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
+  * )
+
+    case ${SERVER} in
+      github )
+        RUN_SHELL_SCRIPTS+=( https://raw.githubusercontent.com/harry41/test/main/scripts/RunScript.sh )
+        ;;
+      * )
+        echo "Global rule :: Agent id - ${AGENTID}"
+        CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/cron.sh|/etc/cron.d/mtracker|644' )
+        RUN_SHELL_SCRIPTS+=( ${BASE_URL}/RunScript.sh ${BASE_URL}/utils/monitor.sh )
+        ;;
+    esac
     ;;
 esac
-
-
-
