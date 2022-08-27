@@ -1,8 +1,8 @@
 # In the original repository we'll just print the result of status checks,
 # without committing. This avoids generating several commits that would make
 # later upstream merges messy for anyone who forked us.
-log_dir="logs"
-keepLogLines="${1:-1000}"
+log_dir="${1:-logs}"
+keepLogLines="${2:-1000}"
 commit=true
 # origin=$(git remote get-url origin)
 # if [[ $origin == *statsig-io/statuspage* ]]
