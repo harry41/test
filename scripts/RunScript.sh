@@ -21,7 +21,7 @@ agent_start(){
 }
 
 #agent_start
-updateapps
+#updateapps
 
 myFunction
 
