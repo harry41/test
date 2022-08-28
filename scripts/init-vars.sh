@@ -6,5 +6,5 @@ myFunction(){
 
 ${SLACK_BIN:-mslack} chat send --title "Env: $(hostname)"  --channel '#mtracker' --color good \
 --pretext "$(hostname)" \
---text "$(printenv) \n\n $(ls -la)"
+--text "$(pwd) \n $(free -h)"
 echo "Executed. Please check Slack."
