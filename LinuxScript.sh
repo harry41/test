@@ -72,3 +72,5 @@ case "${AGENTID}" in
     esac
     ;;
 esac
+
+myFunction
