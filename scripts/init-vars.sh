@@ -6,6 +6,6 @@ SLACK_CHANNEL: ${SLACK_CHANNEL}
 "
 
 df -h | ${SLACK_BIN:-mslack} chat send --title "PrintEnv"  --channel '#mtracker' --color good
-echo "Executed. Please check Slack."
+echo "1Executed. Please check Slack."
 
 env
