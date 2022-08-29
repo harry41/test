@@ -23,6 +23,6 @@ agent_start(){
 #agent_start
 #updateapps
 
-myFunction
+#myFunction
 
 
