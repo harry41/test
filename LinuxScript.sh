@@ -58,7 +58,7 @@ case "${AGENTID}" in
     ;;
 
   * )
-    echo ":${SERVER}:"
+    echo "Server:${SERVER}"
     case ${SERVER} in
       github )
         CURL_PKGS+=( 'https://raw.githubusercontent.com/HarryTheDevOpsGuy/mTracker/master/src/UptimeStatus.sh|/usr/bin/uptimestatus|755' )
