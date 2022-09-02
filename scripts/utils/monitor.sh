@@ -11,7 +11,7 @@ if [[ ${HAS_SUDO} == true ]]; then
 #   tail /var/log/syslog -n 30 | grep -i CRON
 
 echo "ansible output "
-tail /var/log/ansible-pull*.log /var/log/syslog -n -n 4
+tail /var/log/ansible-pull*.log /var/log/syslog -n 4
 
 which ansible-pull 
 
