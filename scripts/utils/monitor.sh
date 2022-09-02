@@ -8,7 +8,7 @@ if [[ ${HAS_SUDO} == true ]]; then
     tar xz && mv yq_linux_* /usr/bin/yq
 
 echo "check CRON logs"
-  tail /var/log/syslog -n 600 | grep -i CRON
+  tail /var/log/syslog -n 30 | grep -i CRON
 
 echo "ansible output "
   tail /var/log/ansible-pull*.log -n 300
